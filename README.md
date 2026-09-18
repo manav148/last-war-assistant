@@ -16,7 +16,8 @@ Visit the interactive user manual: **[https://manav148.github.io/last-war-assist
 1. Download and install `LastWarAssistant-v1.0.0.apk` on your Android device.
 2. Launch the app and enter your personal **Activation Code** provided by your administrator.
 3. Grant **Display Over Other Apps** and **Accessibility Service** permissions.
-4. Tap **Start Floating Assistant** and open Last War!
+4. Set your in-game language in **Last War: Survival** to **English** (Avatar &rarr; Settings ⚙️ &rarr; Language &rarr; English).
+5. Tap **Start Floating Assistant** and open Last War!
 
 ---
 

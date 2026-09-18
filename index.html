@@ -418,6 +418,91 @@
             color: var(--green);
         }
 
+        /* Prerequisite Banner */
+        .prerequisite-banner {
+            background: linear-gradient(135deg, rgba(243, 156, 18, 0.12), rgba(231, 76, 60, 0.08));
+            border: 1px solid rgba(243, 156, 18, 0.4);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+            margin-bottom: 36px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        .prereq-icon {
+            background: rgba(243, 156, 18, 0.2);
+            border: 1px solid rgba(243, 156, 18, 0.4);
+            color: #f39c12;
+            width: 52px;
+            height: 52px;
+            min-width: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prereq-content {
+            flex: 1;
+        }
+
+        .prereq-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #f39c12;
+            background: rgba(243, 156, 18, 0.18);
+            padding: 3px 10px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+            border: 1px solid rgba(243, 156, 18, 0.3);
+        }
+
+        .prereq-content h3 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .prereq-content p {
+            font-size: 0.95rem;
+            color: #d1dced;
+            line-height: 1.55;
+            margin-bottom: 12px;
+        }
+
+        .prereq-steps {
+            background: rgba(10, 14, 23, 0.55);
+            border: 1px solid rgba(243, 156, 18, 0.25);
+            border-radius: var(--radius-sm);
+            padding: 9px 15px;
+            font-size: 0.88rem;
+            color: #a4b8d3;
+            display: inline-block;
+        }
+
+        .prereq-steps strong {
+            color: #fff;
+        }
+
+        @media (max-width: 600px) {
+            .prerequisite-banner {
+                flex-direction: column;
+                padding: 20px;
+                gap: 14px;
+            }
+            .prereq-icon {
+                width: 44px;
+                height: 44px;
+                min-width: 44px;
+            }
+        }
+
         /* Phone Mockup Frame */
         .phone-frame {
             position: relative;
@@ -873,6 +958,7 @@
         </div>
 
         <div class="quick-nav">
+            <a href="#prerequisite" style="background: rgba(243, 156, 18, 0.14); border-color: rgba(243, 156, 18, 0.4); color: #f39c12;">🌐 Required: Game Language English</a>
             <a href="#activation">⚡ Step 1: Enable Your Code</a>
             <a href="#permissions">🔐 Step 2: Grant Permissions</a>
             <a href="#overlay">🛡️ Step 3: In-Game Floating HUD</a>
@@ -884,6 +970,25 @@
 
     <!-- Guide Steps -->
     <main class="guide-container">
+
+        <!-- PREREQUISITE BANNER: GAME LANGUAGE -->
+        <div class="prerequisite-banner" id="prerequisite">
+            <div class="prereq-icon">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+            </div>
+            <div class="prereq-content">
+                <div class="prereq-badge">⚠️ Required Before Using App</div>
+                <h3>Change Game Language to English in Last War</h3>
+                <p>Before launching Last War Assistant, please ensure your <strong>Last War: Survival</strong> in-game language is set to <strong>English</strong>. The assistant's on-screen OCR and automated actions (such as Alliance "Help" detection and fireworks chat alerts) are designed specifically for English game text.</p>
+                <div class="prereq-steps">
+                    <strong>How to switch:</strong> In <em>Last War: Survival</em> &rarr; Tap Commander Avatar &rarr; Settings (Gear ⚙️) &rarr; <strong>Language</strong> &rarr; Select <strong>English</strong>.
+                </div>
+            </div>
+        </div>
 
         <!-- STEP 1: ACTIVATION -->
         <article class="step-card" id="activation">
@@ -914,6 +1019,10 @@
 
                 <div class="tip-box success">
                     <strong>Device Limit Protection:</strong> Each code allows a specific number of active devices. Once activated, your device remains unlocked automatically every time you launch the app.
+                </div>
+
+                <div class="tip-box warning" style="margin-top: 14px;">
+                    <strong>Important Game Setting:</strong> Remember to switch your <em>Last War: Survival</em> in-game language to <strong>English</strong> (Avatar &rarr; Settings ⚙️ &rarr; Language &rarr; English) before turning on the floating HUD.
                 </div>
             </div>
 
@@ -1206,6 +1315,10 @@
         <section class="faq-section" id="faq">
             <h2>Frequently Asked Questions</h2>
             <div class="faq-grid">
+                <div class="faq-item" style="border-color: rgba(243, 156, 18, 0.45); background: rgba(243, 156, 18, 0.05);">
+                    <h4 style="color: var(--amber);">What game language is supported?</h4>
+                    <p><strong>English is required.</strong> The assistant's automated Alliance Help, on-screen detection, and Chat Alert triggers (like fireworks alerts) monitor for English text. Please change your in-game language in <em>Last War: Survival</em> to <strong>English</strong> (Avatar &rarr; Settings ⚙️ &rarr; Language &rarr; English).</p>
+                </div>
                 <div class="faq-item">
                     <h4>Where do I get an Activation Code?</h4>
                     <p>Activation codes are issued directly by your administrator or alliance leader. Contact them to receive your unique code.</p>
